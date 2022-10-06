@@ -1,22 +1,31 @@
+// Variables
 const dropdown = document.querySelector('.dropdown');
 const options = document.querySelector('.options');
 const input = document.querySelector('input');
 const listOfOptions = document.querySelectorAll('.option');
 const body = document.body;
 
-dropdown.addEventListener('click', (event) => {
+// Functions
+const toggleDropdown = (event) => {
   event.stopPropagation();
-  event.currentTarget.classList.toggle('opened');
-});
+  dropdown.classList.toggle('opened');
+};
 
-listOfOptions.forEach((option) => {
-  option.addEventListener('click', (event) => {
-    input.value = event.currentTarget.textContent;
-  });
-});
+const selectOption = (event) => {
+  input.value = event.currentTarget.textContent;
+};
 
-body.addEventListener('click', () => {
+const closeDropdownFromOutside = () => {
   if (dropdown.classList.contains('opened')) {
     dropdown.classList.remove('opened');
   }
+};
+// Event Listeners
+
+body.addEventListener('click', closeDropdownFromOutside);
+
+listOfOptions.forEach((option) => {
+  option.addEventListener('click', selectOption);
 });
+
+dropdown.addEventListener('click', toggleDropdown);
