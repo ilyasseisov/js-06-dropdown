@@ -1,6 +1,5 @@
 // Variables
 const dropdown = document.querySelector('.dropdown');
-const options = document.querySelector('.options');
 const input = document.querySelector('input');
 const listOfOptions = document.querySelectorAll('.option');
 const body = document.body;

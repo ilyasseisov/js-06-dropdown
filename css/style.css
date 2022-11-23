@@ -88,8 +88,10 @@ body {
   padding: 16px;
   border-radius: 9px;
   transition: all 0.2s ease;
-  margin-bottom: 8px;
   color: #292d34;
+}
+.dropdown .options .option:not(:last-of-type) {
+  margin-bottom: 8px;
 }
 .dropdown .options .option:hover {
   color: white;

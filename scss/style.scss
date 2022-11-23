@@ -83,8 +83,10 @@ body {
       padding: 16px;
       border-radius: 9px;
       transition: all 0.2s ease;
-      margin-bottom: 8px;
       color: $color-grey-5;
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
 
       &:hover {
         color: white;
