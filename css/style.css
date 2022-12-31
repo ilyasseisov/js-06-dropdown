@@ -32,6 +32,11 @@ body {
   position: relative;
   top: -80px;
 }
+@media (max-width: 400px) {
+  .dropdown {
+    width: 240px;
+  }
+}
 .dropdown::before {
   content: "";
   position: absolute;
@@ -108,6 +113,10 @@ body {
   top: 30px;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .circle {
   position: absolute;
   border-radius: 100%;
@@ -117,21 +126,22 @@ body {
   width: 250px;
   height: 250px;
   background: linear-gradient(45deg, rgb(42, 179, 248) 0%, rgb(91, 197, 250) 100%);
-  top: 30%;
-  left: 38%;
+  top: -120px;
+  left: -80px;
   z-index: -1;
   box-shadow: 0 10px 25px rgba(42, 179, 248, 0.4);
 }
-.circle.three {
-  width: 300px;
-  height: 300px;
-  opacity: 0.2;
-  background: linear-gradient(45deg, rgb(42, 179, 248) 0%, rgb(91, 197, 250) 100%);
-  top: 30%;
-  left: 37%;
-  z-index: -1;
-  box-shadow: 0 10px 25px rgba(42, 179, 248, 0.4);
-  filter: blur(50px);
+@media (max-width: 575px) {
+  .circle.one {
+    width: 160px;
+    height: 160px;
+    left: -40px;
+  }
+}
+@media (max-width: 400px) {
+  .circle.one {
+    display: none;
+  }
 }
 
 .jssecrets {

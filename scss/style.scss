@@ -22,6 +22,10 @@ body {
   position: relative;
   top: -80px;
 
+  @media (max-width: 400px) {
+    width: 240px;
+  }
+
   // chevron
   &::before {
     content: '';
@@ -111,6 +115,10 @@ body {
   }
 }
 
+.wrapper {
+  position: relative;
+}
+
 // decoration
 .circle {
   position: absolute;
@@ -121,23 +129,19 @@ body {
     width: 250px;
     height: 250px;
     background: $gradient-blue;
-    // border: 3px solid $color-purple;
-    top: 30%;
-    left: 38%;
+    top: -120px;
+    left: -80px;
     z-index: -1;
     box-shadow: $shadow-blue;
-    // filter: blur(40px);
-  }
-  &.three {
-    width: 300px;
-    height: 300px;
-    opacity: 0.2;
-    background: $gradient-blue;
-    top: 30%;
-    left: 37%;
-    z-index: -1;
-    box-shadow: $shadow-blue;
-    filter: blur(50px);
+
+    @media (max-width: 575px) {
+      width: 160px;
+      height: 160px;
+      left: -40px;
+    }
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 }
 
